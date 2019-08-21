@@ -62,7 +62,7 @@ public class BoundingBox implements Visitor<Location> {
 
     @Override
     public Location onOutline(final Outline o) {
-        return o.shape.accept(this);
+        return o.getShape().accept(this);
     }
 
     @Override
