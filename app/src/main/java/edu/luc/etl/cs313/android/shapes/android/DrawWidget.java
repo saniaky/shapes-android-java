@@ -37,7 +37,8 @@ public class DrawWidget extends View {
     @Override
     @SuppressLint("DrawAllocation")
     protected void onDraw(final Canvas canvas) {
-        final Shape shape = Fixtures.simpleCircle;
+        //final Shape shape = Fixtures.simpleCircle;
+        final Shape shape = Fixtures.complexGroup;
         final Location b = shape.accept(new BoundingBox());
         canvas.translate(-b.getX(), -b.getY());
         b.accept(new Draw(canvas, paint));
